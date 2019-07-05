@@ -21,6 +21,7 @@ class Home extends Component {
   componentDidMount() {
     if (sessionStorage.getItem('HomeState')) {
       let state = JSON.parse(sessionStorage.getItem('HomeState'))
+        console.log(JSON.stringify(state));
       this.setState({ ...state })
     } else {
       this.setState({ loading: true })
@@ -105,13 +106,13 @@ class Home extends Component {
             >
               {movies.map( (element, i) => (
                 <MovieThumb
-                  key={i}
-                  clickable={true}
-                  image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
-                  movieId={element.id}
-                  movieName={element.original_title}
+                    key={i}
+                    clickable={true}
+                    image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+                    movieId={element.id}
+                    movieName={element.original_title}
                 />
-              ))}
+            ))}
             </FourColGrid>
             {loading ? <Spinner /> : null}
             {(currentPage <= totalPages && !loading) ?

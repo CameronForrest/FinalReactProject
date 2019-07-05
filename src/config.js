@@ -3,14 +3,12 @@
 
 const API_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = '844dba0bfd8f3a4f3799f6130ef9e335';
-
+const API_NODEJS = 'http://localhost:3322/';
 
 
 // 019e8f375549e0bbd4a4191862ebc88f
 
-// Images
-// An image URL looks like this example:
-// http://image.tmdb.org/t/p/w780/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg
+
 
 const IMAGE_BASE_URL ='http://image.tmdb.org/t/p/';
 
@@ -25,5 +23,6 @@ export {
   API_KEY,
   IMAGE_BASE_URL,
   BACKDROP_SIZE,
-  POSTER_SIZE
+  POSTER_SIZE,
+    API_NODEJS
 }
